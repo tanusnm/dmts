@@ -1,0 +1,708 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel:wght@400..900&family=Maven+Pro:wght@400..900&display=swap');
+
+/* General Body Styling */
+body {
+    font-family: 'Maven Pro', sans-serif; 
+    margin: 40px 60px 0; 
+    background-color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+
+/* Navbar Styling */
+#navbar {
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    padding: 5px;
+}
+
+#navbar .navbar-nav .nav-link {
+    color: #6E53F2; /* Primary accent */
+    text-decoration: none; 
+}
+
+#navbar .navbar-nav .nav-link:hover {
+    color: #B8DF10; /* Hover accent */
+}
+
+#navbar .navbar-nav .nav-link.active {
+    background-color:  #B8DF10; /* Active background color */
+    color: white; 
+    border-radius: 20px; 
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* Custom Button Styles */
+.btn-custom {
+    background-color: #6E53F2;
+    color: #fff; 
+    border: none; 
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.btn-custom:hover {
+    background-color: #B8DF10; 
+    color: #000; 
+}
+
+/* Hero Section */
+#home {
+    background-color: white;
+    height: 100vh;
+    padding: 25px;
+    margin:10px;
+}
+
+#home h1 {
+    font-family: 'Charm', cursive, sans-serif; /* Hero heading font */
+    font-size: 50px;
+    color: #6c6c6c;
+    line-height: 1.4;
+}
+
+#home img {
+    max-width: 100%;
+    height: 90vh;
+}
+
+/* CTA Button */
+.cta-button {
+    font-size: 16px;
+    padding: 20px 30px 20px 30px;
+    border: none;
+    display: inline-flex; /* Enable Flexbox for the button */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjustments on smaller screens */
+@media (max-width: 768px) {
+    #home .custom-h1 {
+        font-size: 2.5rem; 
+        line-height: 1.3; 
+    }
+}
+
+/* Typography */
+h1 {
+    font-family: 'Charm', cursive, sans-serif; /* Hero heading only */
+    font-size: 2.5rem;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif; /* Section headings */
+    font-weight: 500;
+}
+
+h2 {
+    color: #6E53F2;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 1.0rem;
+}
+
+p {
+    font-family: 'Maven Pro', sans-serif; /* Default content font */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Section Padding */
+section {
+    padding: 60px 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4, h5, h6, p {
+        font-size: 1rem;
+    }
+}
+
+/* About Us Section */
+#about {
+    background-color: #fff;
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center;
+}
+
+#about h2, p{
+    margin-top:10px;
+    padding: 10px;
+    line-height: 1.3;
+    margin-left: 0px;
+    padding-left: 0;
+}
+
+#about .col-md-6 img {
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start from the left */
+    transition: all 1s ease; /* Smooth transition */
+}
+
+#about img.animate {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+/* Scroll Animation - Trigger the animation when the section comes into view */
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#about .col-md-6 img {
+    animation: fadeInFromLeft 1s ease-out forwards; /* Apply animation */
+}
+
+/* Our Services Section */
+#services {
+    min-height: 100vh; /* 100% of the viewport height */ 
+    display: flex; 
+    align-items: center; /* Center the content vertically */
+}
+
+#services h2{
+    margin-top: 40px;
+    padding-top: 10px;
+}
+#services p{
+    margin-top:10px;
+    padding-top: 10px;
+}
+/* Flexbox for equal height cards */
+#services .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+#services .card {
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within the card */
+    height: 100%; /* Ensure cards are the same height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start from below */
+}
+
+/* When the card comes into view */
+#services .card.animate {
+    opacity: 1; /* Make the card visible */
+    transform: translateY(0); 
+}
+
+/* Hover Effect */
+#services .card:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+}
+
+/* Animation for the rise effect */
+@keyframes riseAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+#services .card {
+    animation: riseAnimation 1s ease-out forwards; /* Apply rise animation */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    #services .col-md-3 {
+        max-width: 45%; /* Allow two cards per row on smaller screens */
+    }
+}
+#consulting .container{
+    display: flex;
+    height: 100vh;
+}
+
+#consulting {
+
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative; 
+    z-index: 1;
+    
+}
+
+#consulting img {
+    max-height: 400px;
+    object-fit: cover;
+    position: relative; 
+    z-index: 2;
+}
+
+.blob-svg {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 0; /* Position relative to the image */
+    transform: translate(-5%, -45%); /* Adjust placement */
+    width: 80%; /* Size proportional to container */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Place behind the image */
+    pointer-events: none; /* Prevent interaction with blob */
+}
+
+
+/* Industries We Serve Section */
+#industries .container {
+    scroll-padding-top: 20%; 
+    margin-top: 20px;
+    padding-top: 30px;
+}
+
+#industries h2{
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+#industries p{
+    margin:0;
+}
+/* Card Styling */
+#industries .card {
+    border-radius: 35px; /* Rounded corners */
+    text-align: center; /* Center-align text horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Add margin below cards for spacing */
+    margin-top: 20px;
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100%; /* Ensure card has full height for proper alignment */
+}
+
+
+#industries .card:hover {
+    transform: translateY(-5px); /* Lift the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+}
+
+/* Card Image Styling */
+#industries .card-img-top {
+    width: 120px;  /* Reduced size to ensure cards fit */
+    height: 120px; /* Reduced size */
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* Add spacing above and below the paragraph */
+#industries .card-text {
+    margin-top: 20px; /* Space above the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph, if necessary */
+    line-height: 1.6; /* Adjust line height for better readability */
+}
+
+/* Ensuring all cards fit in one row */
+#industries .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Space between cards */
+    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    margin-bottom: 10px;
+}
+
+/* Ensuring each card takes equal width */
+#industries .col-md-3 {
+    flex: 1; /* Cards take equal space */
+    min-width: 180px; /* Minimum card width */
+    max-width: 220px; /* Maximum card width */
+}
+
+/* Responsive Layout for smaller screens */
+@media (max-width: 768px) {
+    #industries .col-md-3 {
+        flex: 1;
+        min-width: 160px; 
+        max-width: 200px;
+    }
+
+    #industries .card-img-top {
+        width: 70px; 
+        height: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    #industries .col-md-3 {
+        min-width: 150px; 
+        max-width: 180px;
+    }
+
+    #industries .card-img-top {
+        width: 60px;  
+        height: 60px; 
+    }
+}
+
+/* Equal Height Cards */
+.card {
+    height: 100%;
+}
+
+/* Carousel Container */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    gap: 15px;
+    animation: slide 20s linear infinite;
+}
+
+.carousel .card {
+    flex: 0 0 calc(100% /4); /* Show 4 cards at a time */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel .card:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Adjust carousel for smaller screens */
+@media (max-width: 768px) {
+    .carousel .card {
+        flex: 0 0 calc(100% / 2); /* Show 2 cards at a time */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel .card {
+        flex: 0 0 100%; /* Show 1 card at a time */
+    }
+}
+
+/* Our Approach to Projects */
+
+#approach h2 {
+    margin-bottom: 20px; 
+    margin-top: 20px;
+}
+
+/* Spacing for the paragraph */
+#approach p {
+    margin-top: 10px;  
+    padding-bottom: 10px;
+}
+
+.timeline-container {
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+/* Timeline Section */
+.timeline-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Line connecting timeline items */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    right: 70px;
+    height: 4px;
+    background: #6E53F2;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline-icon {
+    width: 80px;
+    height: 80px;
+    background: #6E53F2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.timeline-item:last-child .timeline-icon {
+    background: #B8DF10;
+}
+/* Glow effect for the last timeline circle */
+.timeline .timeline-item:last-child .timeline-icon {
+    animation: glow-animation 2s ease-in-out infinite;
+    background-color: #B8DF10; 
+    border-radius: 50%; 
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Keyframes for the glow animation */
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 5px #b8aaff, 0 0 10px #b8aaff, 0 0 15px #b8aaff;
+    }
+    50% {
+        box-shadow: 0 0 8px #b8aaff, 0 0 16px #6E53F2, 0 0 24px #b8aaff;
+    }
+    100% {
+        box-shadow: 0 0 5px #b8aaff, 0 0 10px #b8aaff, 0 0 15px #b8aaff;
+    }
+}
+
+.timeline-icon:hover {
+    transform: scale(1.1);
+}
+
+.icon {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.timeline-content {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.step {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .timeline {
+        overflow-x: auto;
+        padding: 0 20px;
+    }
+    
+    .timeline-item {
+        flex: 0 0 200px;
+    }
+
+    .timeline::before {
+        left: 20px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-icon {
+        margin-bottom: 1rem;
+    }
+}
+
+#why-choose .fa {
+    color: #B8DF10;
+}
+
+#why-choose .row .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #04479a;
+}
+#why-choose h4{
+    font-weight: 600;
+}
+#why-choose p {
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+#faq .container{
+    scroll-padding-top: 30%; 
+    margin-top: 50px;
+}
+#faq p{
+    line-height: 1.5;
+    padding: 5px;
+    margin: 0;
+
+}
+
+#contact{
+    padding: 10px;
+    margin: 0;
+}
+#contact h2{
+color:#fff;
+padding: 0;
+font-weight: 500;
+}
+
+#contact p{
+    color: #fff;
+    padding: 0;
+}
+
+#contact .col-md-7 img {
+animation: fadeInFromLeft 1s ease-out forwards; 
+padding: 20px;
+margin:0;
+height: auto;
+max-width: 400px;
+}
+
+#contact .col-md-7 {
+    padding: 10px;
+    line-height: 1.3;
+    }
+
+#footer {
+        background-color: #B8DF10; 
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+}
+    
+#footer .mb-0 {
+        margin: 0; 
+}
+
+#footer p{
+    color: #fff;
+}
+#footer .container {
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+}
+     
+#footer .social-icons a {
+        font-size: 1.5rem;
+        color: #fff; 
+        transition: color 0.3s ease; 
+        text-decoration: none; 
+        border: none;
+}
+    
+#footer .social-icons a:hover {
+        color: #6E53F2 !important;
+}
+    
+#footer .social-icons a:focus {
+        outline: none; 
+}
+    

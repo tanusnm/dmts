@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecodeMatic Techno Solutions</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=HighTide&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="assets/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/logo.png" alt="Logo" style="height: 75px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#consulting">Consulting</a></li>
+                <li class="nav-item"><a class="nav-link" href="#industries">Industries</a></li>
+                <li class="nav-item"><a class="nav-link" href="#approach" style="display: none;"></a>
+                <li class="nav-item"><a class="nav-link" href="#why-choose" style="display: none;"></a>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="d-flex flex-column flex-md-row align-items-center justify-content-between py-5 px-3" style="background-color: white;"> 
+        <div class="text-center text-md-start col-md-5">
+            <h1 class="display-4 fw-bold">
+                Empowering Your Business with <br>
+                <span style="color: #6E53F2; text-shadow: 2px 2px 1px #3b3b3b; font-size:70px;">Smart</span> 
+                <span style="color: #B8DF10; text-shadow: 2px 2px 1px #3b3b3b;font-size:70px">Solutions</span>
+            </h1>
+            <p class="lead">We provide cutting-edge services to transform your ideas into reality.</p>
+            <a href="#contact" class="btn btn-custom btn-md rounded-pill cta-button">I'm interested to know more!</a>
+        </div>
+        <div class="col-md-7 mt-4 mt-md-0">
+            <img src="assets/images/hero.svg" alt="Hero Image" class="img-fluid rounded-lg">
+        </div>
+    </section>
+    
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="assets/images/about.svg" alt="About Us" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-4">About Us</h2>
+                    <p>
+                        At <strong>DecodeMatic Techno Solutions</strong>, we specialize in delivering cutting-edge solutions tailored 
+                        to meet your unique business needs. Whether you’re looking to develop a custom application,
+                        optimize your engineering designs, or enhance your digital presence, we have the expertise 
+                        to make it happen.
+                    </p>
+                    <p>
+                        Our expertise spans multiple industries, and our solutions are designed to be scalable, cost-effective, and result-driven. 
+                        We take pride in our client-focused approach and strive to build lasting partnerships based on trust and mutual success.
+                    </p>
+                    <p>Let's transform your visions into tangible success!</p>
+                    <a href="#approach" class="btn btn-custom btn-md rounded-pill">Our Approach&nbsp;<i class="fas fa-arrow-right"></i></a></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-5" style="background-color: #f3f6ff;">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- Service Card 1 -->
+                <div class="col-md-3">
+                    <div class="card rounded-4 shadow-sm border-0">
+                        <img src="assets/images/custom-app.svg" class="card-img-top rounded-4" alt="Custom App Development">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Custom App Development</h5>
+                            <p class="card-text">Tailored solutions to meet your specific business needs with scalable and robust applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="col-md-3">
+                    <div class="card rounded-4 shadow-sm border-0">
+                        <img src="assets/images/cad-cae.png" class="card-img-top rounded-4" alt="CAD and CAE Services">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">CAD and CAE Services</h5>
+                            <p class="card-text">High-quality CAD/CAE solutions to accelerate product design and development cycles.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="col-md-3">
+                    <div class="card rounded-4 shadow-sm border-0">
+                        <img src="assets/images/digital-marketing.svg" class="card-img-top rounded-4" alt="Digital Marketing & Website Development">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Digital Marketing & Website Development</h5>
+                            <p class="card-text">Maximize your online presence and business growth with expert web development and marketing strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="col-md-3">
+                    <div class="card rounded-4 shadow-sm border-0">
+                        <img src="assets/images/engineering-consulting.png" class="card-img-top rounded-4" alt="Engineering Consulting">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Engineering & Packaging Consulting</h5>
+                            <p class="card-text">Expert consulting to optimize your product designs, packaging, and engineering processes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Client-Focused Consulting Solutions -->
+    <section id="consulting" class="py-5 position-relative">
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <!-- Image Column -->
+                <div class="col-md-6 mb-4 mb-md-0 position-relative">
+                    <!-- SVG Blob -->
+                    <svg class="blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fill" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(45 0.5 0.5)"><stop offset="0%" stop-color="#D2E647"></stop><stop offset="100%" stop-color="#F7FF7A"></stop></linearGradient></defs><path d="M82.5,65.5Q86,81,70.5,81Q55,81,45.5,77.5Q36,74,20.5,70Q5,66,10.5,52Q16,38,22.5,25.5Q29,13,43.5,9.5Q58,6,70,14.5Q82,23,80.5,36.5Q79,50,82.5,65.5Z" stroke="none" stroke-width="0" fill="url(#fill)"></path></svg>
+                    <img src="assets/images/consulting-solutions.svg" alt="Client-Focused Consulting Solutions" class="img-fluid rounded">
+                </div>
+                <!-- Text Column -->
+                <div class="col-md-6">
+                    <h2 class="mb-4">Client-Focused Consulting Solutions</h2>
+                    <p>
+                        We understand that every business is unique. That’s why we offer tailored strategies to meet your specific needs 
+                        and deliver exceptional results. With a client-first approach, we ensure that every solution is designed 
+                        to achieve maximum impact for your business.
+                    </p>
+                    <p>
+                        From initial consultation to implementation and support, our team is with you every step of the way. Our commitment 
+                        to quality, innovation, and customer satisfaction ensures that we exceed expectations and help you achieve your goals.
+                    </p>
+                    <a href="#contact" class="btn btn-custom btn-lg rounded-pill">Let's Discuss</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section id="industries" style="background-color: #f1f1f1;">
+        <div class="container">
+            <h2 class="text-center mb-5">Industries We Serve</h2>
+            <p class="text-center">
+                Our expertise spans a wide range of industries, ensuring tailored solutions for every client. <br>Here are just a few sectors we specialize in:
+            </p>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Industry Card Examples -->
+                    <div class="card">
+                        <img src="assets/images/automotive.svg" alt="Automotive" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Automotive</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/consumer-goods.svg" alt="Consumer Goods" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Consumer Goods</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/technology.svg" alt="Technology Startups" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Tech Startups</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/manufacturing.svg" alt="Manufacturing" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Manufacturing</h5>
+                        </div>
+                    </div>
+                    <!-- New Additional Cards -->
+                    <div class="card">
+                        <img src="assets/images/packaging.png" alt="Packaging" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Packaging</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/education.svg" alt="Education" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Education</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/agriculture.png" alt="Agriculture" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Agriculture</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/new-domain.svg" alt="New Domain" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Explore New Domains</h5>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/datascience.png" alt="DataScience" class="card-img-top rounded-circle">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Data Science & AI</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center">
+                With our expertise, we quickly understand your industry requirements.<br> and can offer our services as customized solutions across multiple industries worldwide. 
+                <br>Contact us today to discover new opportunities and innovations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Our Approach to Projects -->
+
+    <section id="approach" class="py-5">
+        <div class="timeline-container">
+            <h2 class="text-center mb-4">Our Approach to Projects</h2>
+            <p class="text-center mb-4">We follow a structured approach to ensure successful project outcomes, from initial discussions to long-term support.</p>
+            <div class="timeline">
+                <!-- Discovery Call -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="step"> Project Discovery Call</div>
+                        <p>Initial conversation to understand project scope and objectives</p>
+                    </div>
+                </div>
+
+                <!-- Project Proposal and Quotation -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="icon"><i class="fas fa-file-invoice-dollar"></i></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="step">Project Proposal and Quotation</div>
+                        <p>Providing a detailed proposal with estimated costs and timelines </p>
+                    </div>
+                </div>
+
+                <!-- In-Person or Virtual Meeting -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="icon"><i class="fas fa-video"></i></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="step">In-Person or Virtual Meeting</div>
+                        <p>Discussing project details, expectations, and key milestones</p>
+                    </div>
+                </div>
+
+                <!-- Agreement and Confirmation -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="icon"><i class="fas fa-handshake"></i></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="step">Agreement and Confirmation</div>
+                        <p>Finalizing the terms and confirming the project's initiation</p>
+                    </div>
+                </div>
+                
+                <!-- Design and Development -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="icon"><i class="fas fa-palette"></i></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="step">Design and Development</div>
+                        <p>Creating prototypes, designs, and developing the solution</p>
+                    </div>
+                </div>
+
+                <!-- Delivery and Implementation -->
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <span class="icon"><i class="fas fa-rocket"></i></span>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="step">Delivery and Implementation</div>
+                        <p>Final delivery of the project and its full implementation</p>
+                    </div>
+                </div>
+            </div>
+                <!-- Add the button here -->
+                <div class="text-center mt-5">
+                    <a href="#contact" class="btn btn-custom btn-lg rounded-pill">Schedule a Discovery Call&nbsp;<i class="fas fa-arrow-right"></i></a>
+              </div>
+
+        </div>
+    </section>
+
+  <!-- Why Choose Us Section -->
+    <section id="why-choose" style="background-color: #f1f1f1";>
+        <div class="container text-center">
+            <h2 class="mb-4">Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <i class="fa fa-money-check-alt fa-3x mb-3"></i>
+                    <h4>Cost-effective Solutions</h4>
+                    <p>We offer personalized solutions designed to meet your specific needs that are a reasonable cost.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fa fa-user-tie fa-3x mb-3"></i>
+                    <h4>Expert Team</h4>
+                    <p>Our team of professionals brings unparalleled expertise and experience to every project.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="fa fa-lightbulb fa-3x mb-3"></i>
+                    <h4>Innovation at Core</h4>
+                    <p>We prioritize innovation to deliver cutting-edge solutions that set you apart.</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-custom btn-lg rounded-pill">Get Started Today&nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" <span style="color: #6E53F2"></span>Frequently Asked Questions</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4" style="text-align: justify;">
+                    <p><strong <span style="color: #6E53F2"></span>Q1: What industries do you specialize in?</strong></p>
+                    <p><i class="fa-solid fa-arrow-right"></i> We work across automotive, consumer goods, packaging, engineering technology startups, logistics and manufacturing, tailoring solutions to fit your unique challenges. We are always ready to explore new domains!</p>
+                    <p><strong <span style="color: #6E53F2"></span>Q2: What is the typical project timeline?</strong> </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Timelines vary depending on project scope and industry. After the discovery call, you can expect a project proposal and quotation within <span style="color: #ff8d1b;font-weight: 600;text-decoration: underline;">3-5 business days&nbsp;</span>(max.) which will clearly outline the required resources and efforts to achieve project goals. However,we prioritize delivering high-quality results within agreed deadlines.</p>
+                    <p><strong <span style="color: #6E53F2"></span>Q3: Do you provide ongoing support after project delivery?</strong> </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Yes, we offer implementation support initially and continued assistance on a chargeable basis to ensure your project’s success.</p>    
+                </div>
+                <div class="col-md-6 mb-4" style="text-align: justify;">
+                    <p><strong <span style="color: #6E53F2"></span>Q4: Can I customize the project services to suit my needs?</strong> </p>
+                    <p><i class="fa-solid fa-arrow-right"></i> Absolutely! Every project approach is tailored to meet your specific business objectives.</p>
+                    <p><strong <span style="color: #6E53F2"></span>Q5: What is your approach to ensuring quality?</strong></p>
+                    <p><i class="fa-solid fa-arrow-right"></i> We use a structured process with regular updates, quality checks, and client feedback at every stage.</p>
+                    <p><strong <span style="color: #6E53F2"></span>Q6: What if I do not have a clear idea about my project requirements?</strong></p>
+                    <p><i class="fa-solid fa-arrow-right"></i> No worries. We can help you refine the project requirements during the discovery call.</p>
+                
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#contact" class="btn btn-custom btn-lg rounded-pill">Have More Questions? Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5" style="background-color: #6E53F2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <img src="assets/images/contact-us.svg" alt="Contact Us" class="img-fluid" style="width: 400px; height: 400px;">
+                </div>
+                <div class="col-md-5">
+                    <h2>Contact Us</h2>
+                    <p>DecodeMatic Techno Solutions</p>
+                    <p class="contact-text"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>&nbsp; decodematicts@gmail.com</p>
+                    <p class="contact-text"><i class="fa-solid fa-phone" style="color: #ffffff;"></i>&nbsp; +91 7499699753</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Footer Text -->
+            <p class="mb-0">&copy; 2024 DecodeMatic Techno Solutions</p>
+    
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="mailto:decodematicts@gmail.com" class="text-white mx-2" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="" target="_blank" class="text-white mx-2" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" target="_blank" class="text-white mx-2" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Link to the external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
