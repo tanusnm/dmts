@@ -1,21 +1,5 @@
 // script.js
 
-document.addEventListener('DOMContentLoaded', function () {
-    const carousel = document.querySelector('.carousel');
-    let isHovered = false;
-
-    carousel.addEventListener('mouseenter', () => (isHovered = true));
-    carousel.addEventListener('mouseleave', () => (isHovered = false));
-
-    setInterval(() => {
-        if (!isHovered) {
-            carousel.style.transform = `translateX(${
-                (parseInt(getComputedStyle(carousel).transform.split(',')[4]) || 0) - 300
-            }px)`;
-        }
-    }, 3000);
-});
-
 // Function to detect when elements come into view and add classes for animation
 function animateOnScroll() {
   // Animate About Us images
@@ -36,4 +20,20 @@ function animateOnScroll() {
       }
   });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.carousel');
+    let isHovered = false;
+
+    carousel.addEventListener('mouseenter', () => (isHovered = true));
+    carousel.addEventListener('mouseleave', () => (isHovered = false));
+
+    setInterval(() => {
+        if (!isHovered) {
+            carousel.style.transform = `translateX(${
+                (parseInt(getComputedStyle(carousel).transform.split(',')[4]) || 0) - 300
+            }px)`;
+        }
+    }, 3000);
+});
 
