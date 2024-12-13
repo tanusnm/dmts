@@ -1,7 +1,7 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel:wght@400..900&family=Maven+Pro:wght@400..900&display=swap');
 
-/* General Body Styling */
+/* Body */
 body {
     font-family: 'Maven Pro', sans-serif; 
     margin: 40px 60px 0; 
@@ -9,6 +9,25 @@ body {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+@media (max-width: 432px) {
+    body {
+        margin: 50px 15px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #consulting, #about, #services, #industries, #contact {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 /* Typography */
 h1 {
     font-family: 'Charm', cursive, sans-serif; /* Hero heading only */
@@ -17,7 +36,7 @@ h1 {
 
 h2, h3, h4, h5, h6 {
     font-family: 'Cinzel', serif; /* Section headings */
-    font-weight: 500;
+    font-weight: 600;
 }
 
 h2 {
@@ -66,7 +85,7 @@ p {
 }
 
 #navbar .navbar-nav .nav-link.active {
-    background-color:  #B8DF10; /* Active background color */
+    background-color:  #B8DF10; 
     color: white; 
     border-radius: 20px; 
 }
@@ -76,12 +95,69 @@ p {
     box-shadow: 0 4px 2px -2px gray;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        position: relative; 
+        z-index: 1101; 
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 1050;
+        overflow-y: auto;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    .navbar-collapse.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .navbar-brand {
+        position: relative;
+        z-index: 1102;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        padding-bottom: 20px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        margin: 12px 0;
+        color: #04479a;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #B8DF10;
+    }
+}
+
 /* Custom Button Styles */
 .btn-custom {
     background-color: #6E53F2;
     color: #fff; 
     border: none; 
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-custom:hover {
@@ -96,47 +172,43 @@ p {
     margin: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically align content */
+    justify-content: center; 
 }
 
 #home h1 {
-    font-family: 'Charm', cursive, sans-serif; /* Hero heading font */
+    font-family: 'Charm', cursive, sans-serif;
     font-size: 50px;
     color: #6c6c6c;
     line-height: 1.4;
 }
 
 #home img {
-    width: 100%; /* Make the image responsive */
+    width: 100%;
     padding-top: 20px;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure it covers the area without stretching */
-    max-height: 80vh; /* Limit the height for smaller screens */
+    height: auto; 
+    object-fit: cover;
+    max-height: 80vh; 
 }
 
-/* Adjustments for smaller screens */
 @media (max-width: 768px) {
     #home {
-        padding: 15px; /* Reduced padding */
-        margin: 5px; /* Reduced margin */
-        height: auto; /* Let the section height adjust based on content */
+        padding: 15px; 
+        margin: 5px;
+        height: auto;
     }
 
-    /* Resize hero text */
     #home h1 {
         font-size: 2rem; 
-        margin-bottom: 10px; /* Reduced margin to bring text closer to the image */
+        margin-bottom: 10px;
     }
 
-    /* Resize paragraph text */
     #home p {
         font-size: 1rem;
-        margin-bottom: 15px; /* Reduced bottom margin */
+        margin-bottom: 15px;
     }
 
-    /* Resize image for mobile */
     #home img {
-        max-height: 50vh; /* Limit the height for mobile screens */
+        max-height: 50vh; 
     }
 }
 
@@ -179,58 +251,52 @@ p {
     animation: fadeInFromLeft 1s ease-out forwards;
 }
 
-/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-    /* Flexbox layout changes: Stack text on top of the image on mobile */
+
     #about .row {
         display: flex;
-        flex-direction: column-reverse; /* Text goes below image on mobile */
+        flex-direction: column-reverse;
         text-align: center;
     }
 
-    /* Text section takes full width */
     #about h2, p {
         width: 100%;
         padding: 15px;
     
     }
 
-    /* Adjust image size */
     #about .col-md-6 img {
         width: 80%;
         margin-top: 20px;
     }
 }
 
-/* Adjustments for larger screens (reversed order) */
 @media (min-width: 769px) {
-    /* Flexbox layout: Image goes first (reversed order) */
+
     #about .row {
         display: flex;
-        flex-direction: row-reverse; /* Reverse the order on larger screens */
-        text-align: left; /* Align text to the left */
-        justify-content: space-between; /* Ensures spacing between text and image */
-        align-items: center; /* Vertically centers the content */
+        flex-direction: row-reverse; 
+        text-align: left; 
+        justify-content: space-between; 
+        align-items: center;
     }
 
-    /* Ensure text section and image take full width */
     #about h2, p {
-        width: 100%; /* Limit text width */
+        width: 100%; 
         padding: 15px;
     }
 
-    /* Adjust image size and alignment */
     #about .col-md-6 img {
-        width: 85%; /* Adjust width of the image */
-        margin-left: 10px; /* Add space between text and image */
+        width: 85%;
+        margin-left: 10px; 
     }
 }
 
 /* Our Services Section */
 #services {
-    min-height: 100vh; /* 100% of the viewport height */
+    min-height: 100vh; 
     display: flex;
-    align-items: center; /* Center the content vertically */
+    align-items: center; 
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -245,101 +311,108 @@ p {
     padding-top: 10px;
 }
 
-/* Flexbox for equal height cards */
 #services .row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-/* Card Styling */
 #services .card {
-    border-radius: 20px; /* Rounded corners */
-    overflow: hidden; /* Ensure content stays within the card */
-    height: 100%; /* Ensure cards are the same height */
+    border-radius: 20px; 
+    overflow: hidden;
+    height: 100%; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0; /* Initially hidden */
-    transform: translateY(50px); /* Start from below */
+    opacity: 0; 
+    transform: translateY(50px); 
 }
-/* Hover Effect for Our Services Section */
+
 #services .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #services .card:hover {
-    transform: translateY(-10px); /* Lift the card on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
 }
-/* When the card comes into view */
+
 #services .card.animate {
-    opacity: 1; /* Make the card visible */
+    opacity: 1;
     transform: translateY(0);
 }
 
-
-
-/* Animation for the rise effect */
 @keyframes riseAnimation {
     0% {
         opacity: 0;
-        transform: translateY(50px); /* Start below */
+        transform: translateY(50px); 
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* End at original position */
+        transform: translateY(0);
     }
 }
 
 #services .card {
-    animation: riseAnimation 1s ease-out forwards; /* Apply rise animation */
+    animation: riseAnimation 1s ease-out forwards;
 }
 
-/* Responsive Design for Small Screens (max-width: 768px) */
 @media (max-width: 768px) {
-    /* Stack the cards vertically */
+
     #services .row {
-        flex-direction: column; /* Stack cards vertically */
-        align-items: center; /* Center the cards */
+        flex-direction: column;
+        align-items: center; 
     }
 
-    /* Adjust card width for small screens */
     #services .col-md-3 {
-        width: 90%; /* Take full width of the container */
-        margin-bottom: 20px; /* Add spacing between cards */
+        width: 90%; 
+        margin-bottom: 20px;
     }
 
-    /* Adjust card image size */
     #services .card-img-top {
-        max-width: 100%; /* Ensure the image takes full width of the card */
-        height: auto; /* Maintain aspect ratio */
+        max-width: 100%; 
+        height: auto; 
     }
 
-    /* Reduce padding on text for small screens */
     #services .card-body {
         padding: 15px;
     }
 
-    /* Adjust heading font size */
     #services h2 {
-        font-size: 1.5rem; /* Smaller heading on mobile */
-        text-align: center; /* Center the heading */
+        text-align: center;
+    }
+
+    #services .card h5 {
+        text-align: center;
+        font-weight: bold;
+        color:#0072FF;
     }
 }
 
-/* Responsive Design for Medium Screens (tablet: 768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
-    /* Reduce the width of the cards on medium-sized screens */
+
     #services .col-md-3 {
-        width: 45%; /* Cards take 45% width on tablets */
+        width: 45%; 
+    }
+}
+
+/* Services Section */
+@media (max-width: 412px) {
+
+    #services .col-md-4 {
+        flex: 0 0 45%; 
+        max-width: 45%;
+    }
+
+    #services .card {
+        margin-bottom: 15px; 
     }
 }
 
 /* Consulting Section */
 #consulting .container {
     display: flex;
-    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    flex-wrap: wrap; 
     align-items: center;
-    justify-content: center; /* Center the content */
+    justify-content: center;
     height: 100vh;
 }
 
@@ -350,7 +423,7 @@ p {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: center; /* Center align the content horizontally */
+    justify-content: center;
 }
 
 #consulting img {
@@ -358,7 +431,7 @@ p {
     object-fit: cover;
     position: relative;
     z-index: 2;
-    width: 100%; /* Ensure image takes full width */
+    width: 100%; 
 }
 
 .blob-svg {
@@ -374,39 +447,35 @@ p {
 
 @media (max-width: 768px) {
     #consulting .container {
-        flex-direction: column; /* Stack image and text vertically on smaller screens */
-        text-align: center; /* Center text */
+        flex-direction: column; 
+        text-align: center;
         margin-right: auto;
     }
 
     #consulting img, .blob-svg {
-        width: 100%; /* Ensure both the image and blob take full width */
-        max-height: 300px; /* Adjust image size for smaller screens */
+        width: 100%; 
+        max-height: 300px; 
     }
 
     #consulting .btn {
-        width: auto; /* Keep button width auto for responsiveness */
-        margin-top: 20px; /* Space out button from content */
+        width: auto; 
+        margin-top: 20px; 
     }
 }
 
-/* General container fixes for smaller screens */
 @media (max-width: 768px) {
-    /* Add padding to ensure equal margins on both sides */
     .container, #consulting .container, #about .container, #services .container {
-        padding-left: 15px; /* Adjust this value to control left padding */
-        padding-right: 15px; /* Adjust this value to control right padding */
-        width: 100%; /* Ensure the container takes up the full width */
-        box-sizing: border-box; /* Include padding in the container width */
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%; 
+        box-sizing: border-box; 
     }
 
-    /* Optional: Adjust navbar padding or margin for small screens */
     .navbar {
         padding-left: 15px;
         padding-right: 15px;
     }
 
-    /* Ensure the text sections are well aligned with the image and blob */
     #consulting img, .blob-svg {
         width: 100%;
     }
@@ -417,17 +486,17 @@ p {
     }
 }
 
-/* Industries We Serve Section */
+/* Industries Section */
 #industries {
-    padding-top: 60px;  /* Add more padding to create space at the top */
+    background-color: #f1f1f1;
+    padding-top: 60px;
     margin-top: 0;
 }
 
 #industries .container {
-    scroll-padding-top: 50px;  /* Adjust scroll padding for smooth scroll to the start */
-    padding-top: 50px; /* Ensure enough space for the content */
+    scroll-padding-top: 50px; 
+    padding-top: 50px;
 }
-
 
 #industries h2{
     margin-top: 0px;
@@ -436,58 +505,52 @@ p {
 #industries p{
     margin:0;
 }
-/* Card Styling */
-#industries .card {
-    border-radius: 35px; /* Rounded corners */
-    text-align: center; /* Center-align text horizontally */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px; /* Add margin below cards for spacing */
-    margin-top: 20px;
-    display: flex; /* Enable Flexbox */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    height: 100%; /* Ensure card has full height for proper alignment */
-}
 
+#industries .card {
+    border-radius: 35px; 
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 100%; 
+}
 
 #industries .card:hover {
-    transform: translateY(-5px); /* Lift the card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Card Image Styling */
 #industries .card-img-top {
-    width: 120px;  /* Reduced size to ensure cards fit */
-    height: 120px; /* Reduced size */
+    width: 120px; 
+    height: 120px;
     object-fit: cover;
     margin: 0 auto;
 }
 
-/* Add spacing above and below the paragraph */
 #industries .card-text {
-    margin-top: 20px; /* Space above the paragraph */
-    margin-bottom: 20px; /* Space below the paragraph, if necessary */
-    line-height: 1.6; /* Adjust line height for better readability */
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    line-height: 1.6;
 }
 
-/* Ensuring all cards fit in one row */
 #industries .row {
     display: flex;
     justify-content: space-between;
-    gap: 15px; /* Space between cards */
-    flex-wrap: nowrap; /* Prevent wrapping of cards */
+    gap: 15px; 
+    flex-wrap: nowrap;
     margin-bottom: 10px;
 }
 
-/* Ensuring each card takes equal width */
 #industries .col-md-3 {
-    flex: 1; /* Cards take equal space */
-    min-width: 180px; /* Minimum card width */
-    max-width: 220px; /* Maximum card width */
+    flex: 1; 
+    min-width: 180px;
+    max-width: 220px;
 }
 
-/* Responsive Layout for smaller screens */
 @media (max-width: 768px) {
     #industries .col-md-3 {
         flex: 1;
@@ -513,12 +576,30 @@ p {
     }
 }
 
-/* Equal Height Cards */
+@media (max-width: 432px) {
+    #industries .card {
+        height: 350px; 
+    }
+    #industries .card-img-top {
+        width: 250px;  
+        height: 250px; 
+    }
+    #industries .card h5{
+        font-size: 25px;
+        color: #0072FF;
+        font-weight: bold;
+    }
+        #industries .card-img-top {
+        width: 250px;  
+        height: 250px; 
+    }
+    
+}
+
 .card {
     height: 100%;
 }
 
-/* Carousel Container */
 .carousel-container {
     overflow: hidden;
     width: 100%;
@@ -532,7 +613,7 @@ p {
 }
 
 .carousel .card {
-    flex: 0 0 calc(100% /4); /* Show 4 cards at a time */
+    flex: 0 0 calc(100% /4);
     margin: 0 10px;
     transition: transform 0.3s ease;
 }
@@ -559,27 +640,25 @@ p {
     }
 }
 
-/* Adjust carousel for smaller screens */
 @media (max-width: 768px) {
     .carousel .card {
-        flex: 0 0 calc(100% / 2); /* Show 2 cards at a time */
+        flex: 0 0 calc(100% / 2); 
     }
 }
 
 @media (max-width: 576px) {
     .carousel .card {
-        flex: 0 0 100%; /* Show 1 card at a time */
+        flex: 0 0 100%;
     }
 }
 
-/* Our Approach to Projects */
+/* Approach to Projects */
 
 #approach h2 {
     margin-bottom: 20px; 
     margin-top: 20px;
 }
 
-/* Spacing for the paragraph */
 #approach p {
     margin-top: 10px;  
     padding-bottom: 10px;
@@ -591,7 +670,6 @@ p {
     margin-bottom: 0;
 }
 
-/* Timeline Section */
 .timeline-container {
     width: 100%;
     max-width: 1200px;
@@ -605,7 +683,6 @@ p {
     justify-content: space-between;
 }
 
-/* Line connecting timeline items */
 .timeline::before {
     content: '';
     position: absolute;
@@ -643,7 +720,7 @@ p {
 .timeline-item:last-child .timeline-icon {
     background: #B8DF10;
 }
-/* Glow effect for the last timeline circle */
+
 .timeline .timeline-item:last-child .timeline-icon {
     animation: glow-animation 2s ease-in-out infinite;
     background-color: #B8DF10; 
@@ -654,7 +731,6 @@ p {
     align-items: center;
 }
 
-/* Keyframes for the glow animation */
 @keyframes glow-animation {
     0% {
         box-shadow: 0 0 5px #b8aaff, 0 0 10px #b8aaff, 0 0 15px #b8aaff;
@@ -685,28 +761,32 @@ p {
 }
 
 .step {
-    font-weight: bold;
     font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 0.5rem;
+    text-align: center;
+    display: block;
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .timeline-content p {
     font-size: 0.9rem;
     line-height: 1.4;
 }
-/* Timeline Section */
+
 /* Timeline Section */
 @media (max-width: 768px) {
-    /* Make the timeline vertical for smaller screens */
+
     .timeline {
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-        margin-top: 50px;  /* Adjust margin for top spacing */
+        margin-top: 50px; 
     }
 
-    /* Make the vertical line */
     .timeline::before {
         content: '';
         position: absolute;
@@ -717,10 +797,9 @@ p {
         background: #6E53F2;
         z-index: 1;
         transform: translateX(-50%);
-        opacity: 0.3; /* Reduced opacity to make the line less visible */
+        opacity: 0.3;
     }
 
-    /* Add breaks in the vertical line at each step */
     .timeline-item {
         position: relative;
         z-index: 2;
@@ -732,21 +811,19 @@ p {
         position: relative;
     }
 
-    /* Break the line at each step by adding pseudo-elements */
     .timeline-item::after {
         content: '';
         position: absolute;
         top: 0;
         left: 50%;
         width: 4px;
-        height: 50%;  /* Make the line shorter at each item */
+        height: 50%;
         background: #6E53F2;
         z-index: 0;
         transform: translateX(-50%);
-        opacity: 0.3; /* Reduced opacity to make the line less visible */
+        opacity: 0.3; 
     }
 
-    /* Circle adjustments */
     .timeline-icon {
         width: 60px;
         height: 60px;
@@ -761,47 +838,50 @@ p {
         margin-bottom: 10px;
     }
 
-    /* Circle hover effect */
     .timeline-icon:hover {
         transform: scale(1.1);
     }
 
-    /* Adjust last timeline item circle */
     .timeline-item:last-child .timeline-icon {
         background: #B8DF10;
         animation: glow-animation 2s ease-in-out infinite;
     }
 
-    /* Timeline content adjustments */
     .timeline-content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start; /* Align text to the left */
+        align-items: flex-start; 
         width: 100%;
         max-width: 300px;
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
-        background-color: white;  /* White background for better contrast */
-        border-radius: 5px;  /* Slight rounding for text background */
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Optional subtle shadow for text */
-        z-index: 2; /* Ensure text stays above the line */
+        background-color: white; 
+        border-radius: 15px; 
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  
+        z-index: 2; 
     }
 
-    /* Label for steps */
     .step {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: bold;
         margin-bottom: 0.5rem;
-        text-align: center; /* Center the label text */
+        text-align: center;
     }
 
-    /* Text content style */
     .timeline-content p {
         font-size: 0.9rem;
         line-height: 1.4;
     }
-
+    
+    @media (max-width: 768px) {
+    .btn {
+            font-size: 0.9rem; 
+            padding: 8px 15px; 
+            font-weight: bold;
+        }
+    }
+    
     /* Glow animation */
     @keyframes glow-animation {
         0% {
@@ -817,50 +897,47 @@ p {
 }
 
 /* Why Choose Us Section */
-/* Why Choose Us Section */
 #why-choose {
     background-color: #f1f1f1;
 }
 
 #why-choose .container {
-    padding-top: 40px; /* Add space before the heading inside the container */
-    padding-bottom: 40px; /* Add space at the bottom of the container */
+    padding-top: 40px;
+    padding-bottom: 40px; 
 }
 
 #why-choose h2 {
     margin-bottom: 20px;
-    color: #04479a; /* Set heading color */
+    color: #04479a; 
 }
 
 #why-choose .fa {
-    color: #B8DF10; /* Icon color */
+    color: #B8DF10; 
 }
 
 #why-choose .row .col-md-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #04479a; /* Text color for the sections */
+    color: #04479a;
 }
 
 #why-choose h4 {
     font-weight: 600;
-    color: #04479a; /* Heading color for each item */
+    color: #04479a; 
 }
 
 #why-choose p {
     margin-top: 20px;
     padding-bottom: 50px;
-    color: #555; /* Text color for the paragraph */
+    color: #555;
 }
 
-/* Hover effect for icons */
 #why-choose .fa:hover {
     transform: scale(1.2);
-    color: #6E53F2; /* Change color on hover */
+    color: #6E53F2;
 }
 
-/* Ensure proper spacing for smaller screens */
 @media (max-width: 768px) {
     #why-choose .row {
         display: flex;
@@ -873,16 +950,16 @@ p {
     }
 
     #why-choose h2 {
-        margin-top: 0;  /* Remove any margin-top on small screens */
+        margin-top: 0; 
     }
 
     #why-choose p {
-        padding-bottom: 20px; /* Reduce bottom padding for smaller screens */
+        padding-bottom: 20px; 
     }
 
     .btn-custom {
-        width: 100%;  /* Make the button full-width on small screens */
-        margin-top: 20px;  /* Add space above the button */
+        width:85%; 
+        margin-top: 20px; 
     }
 }
 
@@ -896,31 +973,53 @@ p {
     margin: 0;
 
 }
+
+#faq {
+    padding-right: 20px; 
+}
+
+@media (max-width: 768px) {
+    #faq {
+        padding-right: 15px;
+    }
+}
+
+#faq .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px; 
+}
+
+@media (max-width: 768px) {
+    #faq .btn {
+        font-size: 0.9rem; 
+        padding: 8px 15px; 
+        font-weight: bold;
+    }
+}
+
 /* Contact Section */
 #contact {
     padding: 10px;
     margin: 0;
-    display: flex; /* Enable flexbox for vertical centering */
-    align-items: center; /* Vertically center the content */
-    justify-content: center; /* Horizontally center the content */
-    height: auto; /* Ensure the container doesn't take full height by default */
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    height: auto; 
 }
 
-/* Title styling */
 #contact h2 {
     color: #fff;
     padding: 0;
     font-weight: 500;
 }
 
-/* Paragraph styling */
 #contact p {
     color: #fff;
     font-weight: bold;
     padding: 0;
 }
 
-/* Image styling */
 #contact .col-md-7 img {
     animation: fadeInFromLeft 1s ease-out forwards;
     padding: 20px;
@@ -929,32 +1028,30 @@ p {
     max-width: 400px;
 }
 
-/* Content column styling */
 #contact .col-md-7 {
     padding: 10px;
     line-height: 1.3;
 }
 
-/* Adjust layout for smaller screens */
 @media (max-width: 768px) {
     #contact {
-        flex-direction: column; /* Stack the content vertically */
+        flex-direction: column; 
         justify-content: center;
         padding: 20px;
-        height: auto; /* Adjust height for small screens */
+        height: auto;
     }
 
     #contact h2 {
-        margin-bottom: 20px; /* Add margin to separate heading from other content */
+        margin-bottom: 20px; 
     }
 
     #contact .col-md-7 {
-        text-align: center; /* Center-align the text in the content column */
+        text-align: center; 
     }
 
     #contact .col-md-7 img {
-        max-width: 100%; /* Ensure the image scales to fit smaller screens */
-        margin: 0 auto; /* Center the image */
+        max-width: 100%; 
+        margin: 0 auto;
     }
 }
 
@@ -979,7 +1076,7 @@ p {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 0 15px; /* Add padding to prevent icons touching edges */
+    padding: 0 15px;
 }
 
 /* Social Media Icons */
@@ -1000,26 +1097,24 @@ p {
     outline: none; 
 }
 
-/* Align the social icons to the right */
 #footer .social-icons {
     display: flex;
-    justify-content: flex-end; /* Align icons to the right */
+    justify-content: flex-end; 
 }
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
     #footer .container {
-        flex-direction: column; /* Stack content vertically on small screens */
-        align-items: center; /* Center-align the content */
-        text-align: center; /* Center the text */
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center; 
     }
 
     #footer .social-icons {
-        margin-top: 15px; /* Add space between text and icons */
+        margin-top: 15px; 
     }
 
     #footer .social-icons a {
-        font-size: 1.2rem; /* Slightly reduce icon size on small screens */
-        margin: 5px; /* Adjust spacing between icons */
+        font-size: 1.2rem; 
+        margin: 5px; 
     }
 }
